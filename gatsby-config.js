@@ -3,6 +3,20 @@ module.exports = {
     title: `Dantilse`,
     description: `This is my personal website`,
     author: `@dantilse`,
+    menuLinks: [
+      {
+        name: "home",
+        link: "/",
+      },
+      {
+        name: "page 2",
+        link: "/page-2",
+      },
+      {
+        name: "blog",
+        link: "/blog",
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -11,6 +25,14 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/src/posts`,
       },
     },
     `gatsby-transformer-sharp`,
