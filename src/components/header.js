@@ -2,13 +2,10 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
+import "../scss/components/_header.scss"
+
+const Header = ({ menuLinks, siteTitle }) => (
+  <header className="site-header">
     <div
       style={{
         margin: `0 auto`,
@@ -27,6 +24,25 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
+      <div>
+        <nav>
+          <ul style={{ display: "flex", flex: 1 }}>
+            {menuLinks.map(link => (
+              <li
+                key={link.name}
+                style={{
+                  listStyleType: `none`,
+                  padding: `1rem`,
+                }}
+              >
+                <Link style={{ color: `white` }} to={link.link}>
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
 )
