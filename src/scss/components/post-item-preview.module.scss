@@ -1,0 +1,30 @@
+@import "../inc/setup";
+
+.post-item {
+    display: block;
+    padding: 15px;
+    margin-bottom: 30px;
+    color: #333;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-shadow: 1px 3px 3px rgba(0,0,0,.05);
+    transition: all 200ms ease-in-out;
+
+    &:hover {
+        box-shadow: 1px 3px 5px rgba(0,0,0,.1);
+    }
+
+    &-title {
+        margin-bottom: 5px;
+    }
+
+    &-metadata {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+
+    &-excerpt {
+        margin-bottom: 0;
+    }
+}

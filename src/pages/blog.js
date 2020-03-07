@@ -1,7 +1,8 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql, Link } from "gatsby"
 
 import Layout from "../components/layout"
+import PostItemPreview from '../components/postItemPreview'
 
 const getMarkdownPosts = graphql`
   {
@@ -15,6 +16,9 @@ const getMarkdownPosts = graphql`
             date
           }
           excerpt
+          fields {
+            slug
+          }
         }
       }
     }
@@ -31,13 +35,13 @@ export default () => (
           <>
             <h4>{data.allMarkdownRemark.totalCount} posts</h4>
             {data.allMarkdownRemark.edges.map(({ node }) => (
-              <div key={node.id}>
-                <h3>
-                  {node.frontmatter.title}{" "}
-                  <span>- {node.frontmatter.date}</span>
-                </h3>
-                <p>{node.excerpt}</p>
-              </div>
+              <PostItemPreview
+                id={node.id}
+                title={node.frontmatter.title}
+                date={node.frontmatter.date}
+                excerpt={node.excerpt}
+                slug={node.fields.slug}
+              />
             ))}
           </>
         )}

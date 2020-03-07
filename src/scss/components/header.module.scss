@@ -1,20 +1,18 @@
-@import "../inc/functions";
-@import "../inc/mixins";
-@import "../inc/variables";
+@import "../inc/setup";
 
 .site-header {
   display: flex;
   align-items: center;
-  padding: 30px;
-  background-color: $purple;
+  padding: 15px;
+  background-color: $background-ui;
+  border-bottom: 1px solid $border-color;
 }
 
 .site-title {
   margin-bottom: 0;
-  color: $white;
 
   a {
-    color: inherit;
+    color: $text-color;
     text-decoration: none;
   }
 }
@@ -32,7 +30,7 @@
   a {
     display: inline-block;
     padding: 10px;
-    color: $white;
+    color: $text-color;
     text-decoration: none;
     transition: all 200ms ease-in-out;
 
