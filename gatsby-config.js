@@ -4,14 +4,10 @@ module.exports = {
     description: `This is my personal website`,
     author: `@dantilse`,
     menuLinks: [
-      {
-        name: "home",
-        link: "/",
-      },
-      {
-        name: "page 2",
-        link: "/page-2",
-      },
+      // {
+      //   name: "page 2",
+      //   link: "/page-2",
+      // },
       {
         name: "blog",
         link: "/blog",
@@ -46,7 +42,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-sass`,

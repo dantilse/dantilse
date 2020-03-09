@@ -1,11 +1,13 @@
 @import "../inc/setup";
 
 .site-header {
-  display: flex;
-  align-items: center;
-  padding: 15px;
-  background-color: $background-ui;
-  border-bottom: 1px solid $border-color;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  &-inner {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .site-title {
