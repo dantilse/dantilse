@@ -21,6 +21,7 @@ const Layout = ({ children }) => {
       site {
         siteMetadata {
           title
+          description
           menuLinks {
             name
             link
@@ -35,13 +36,14 @@ const Layout = ({ children }) => {
       <Header
         menuLinks={data.site.siteMetadata.menuLinks}
         siteTitle={data.site.siteMetadata.title}
+        siteDescription={data.site.siteMetadata.description}
       />
       <div className={layoutStyles.siteMain}>
         <main className={layoutStyles.container}>{children}</main>
       </div>
       <footer className={footerStyles.siteFooter}>
         <div className={layoutStyles.container}>
-          ©{new Date().getFullYear()}, Dantilse
+          ©&nbsp;{new Date().getFullYear()}, Dantilse
         </div>
       </footer>
     </div>

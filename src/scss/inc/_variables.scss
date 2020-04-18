@@ -15,10 +15,23 @@ $gray-9: #212529;
 // Colors
 $purple: rebeccapurple;
 
-
 // Commons
 $background-ui: $gray-0;
 $border-color: $gray-3;
 $divider-color: $gray-4;
 $text-color: $gray-7;
-$text-muted: $gray-5;
+$text-muted: $gray-6;
+
+// Fonts
+$font-size-large: 18px;
+$font-size-base: 16px;
+$font-size-small: 14px;
+
+$font-weight-base: 400;
+$font-weight-heavy: 700;
+
+// Animations
+$animation-duration-base: 300ms;
+$animation-duration-fast: 200ms;
+$animation-duration-slow: 500ms;
+$cubic-bezier-base: cubic-bezier(0.04, 0, 0.2, 1);

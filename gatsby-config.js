@@ -1,16 +1,20 @@
 module.exports = {
   siteMetadata: {
     title: `Dantilse`,
-    description: `This is my personal website`,
+    description: `UX/UI Developer`,
     author: `@dantilse`,
     menuLinks: [
       // {
-      //   name: "page 2",
-      //   link: "/page-2",
+      //   name: "Articles",
+      //   link: "/blog",
       // },
       {
-        name: "blog",
-        link: "/blog",
+        name: "LinkedIn",
+        link: "//www.linkedin.com/in/dantilse/",
+      },
+      {
+        name: "dantilse@gmail.com",
+        link: "mailto:dantilse@gmail.com",
       },
     ],
   },
