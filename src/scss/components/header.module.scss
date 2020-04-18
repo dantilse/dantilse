@@ -1,5 +1,10 @@
 @import "../inc/setup";
 
+// Hide mobile menu, need better solution than this
+body {
+  overflow-x: hidden;
+}
+
 .site {
   &-header {
     padding-top: 15px;
@@ -12,6 +17,7 @@
   }
 
   &-title {
+    flex-shrink: 0;
     display: block;
     font-size: $font-size-large;
     color: $text-color;
@@ -28,10 +34,38 @@
   }
 
   &-nav {
-    display: flex;
+    position: relative;
     margin-left: auto;
-    margin-bottom: 0;
-    list-style: none;
+    text-align: right;
+
+    ul {
+      // display: none;
+      margin-bottom: 0;
+      margin-left: 0;
+      list-style: none;
+      transition: all $animation-duration-base $cubic-bezier-base;
+
+      @include breakpoint-max($screen-small) {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        z-index: 1;
+        padding: 10px;
+        margin-top: 20px;
+        background-color: $white;
+        border: 1px solid $border-color;
+        border-radius: 3px;
+        transform: translateX(110%);
+
+        &.open {
+          transform: translateX(0);
+        }
+      }
+
+      @include breakpoint($screen-small) {
+        display: flex;
+      }
+    }
 
     li {
       margin-bottom: 0;
@@ -47,6 +81,16 @@
 
       &:hover {
         background-color: rgba($black, 0.05);
+      }
+    }
+
+    &-toggle {
+      color: $text-color;
+      background-color: transparent;
+      border: none;
+
+      @include breakpoint($screen-small) {
+        display: none;
       }
     }
   }
