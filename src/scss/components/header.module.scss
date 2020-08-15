@@ -43,7 +43,6 @@ body {
       margin-bottom: 0;
       margin-left: 0;
       list-style: none;
-      transition: all $animation-duration-base $cubic-bezier-base;
 
       @include breakpoint-max($screen-small) {
         position: absolute;
@@ -56,6 +55,7 @@ body {
         border: 1px solid $border-color;
         border-radius: 3px;
         transform: translateX(110%);
+        transition: transform $animation-duration-base $cubic-bezier-base;
 
         &.open {
           transform: translateX(0);
