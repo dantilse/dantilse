@@ -1,16 +1,18 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
+import Image from "../components/image"
 import SEO from "../components/seo"
+import "../scss/style.scss"
 
-const SecondPage = () => (
+const IndexPage = () => (
   <Layout>
-    <SEO title="Page two" />
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
+    <SEO title="Home" />
+    <figure className="home-image">
+      <Image />
+      <figcaption>Hi, I'm Dan</figcaption>
+    </figure>
   </Layout>
 )
 
-export default SecondPage
+export default IndexPage

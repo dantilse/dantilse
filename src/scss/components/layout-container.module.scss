@@ -1,3 +1,5 @@
+@import "../inc/setup";
+
 .site-wrapper {
   min-height: 100vh;
   display: flex;
@@ -6,11 +8,22 @@
 
 .container {
   width: 100%;
-  max-width: 960px;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+
+  @include breakpoint(768px) {
+    width: 740px;
+  }
+
+  @include breakpoint(992px) {
+    width: 980px;
+  }
+
+  @include breakpoint(1200px) {
+    width: 1170px;
+  }
 }
 
 .site-main {

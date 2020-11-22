@@ -1,0 +1,111 @@
+@import "../inc/setup";
+
+.info {
+  // container
+  &-block {
+    position: relative;
+    // background-color: coral;
+  }
+  
+  // profile image and name container
+  // &-image {
+  //   // text-align: center;
+  // }
+
+  // Name
+  &-name {
+    // TODO: check global text color
+    margin-bottom: 5px;
+  }
+
+  // Position/title
+  &-title {
+    // TODO: set to a lighter color
+    color: $gray-6;
+  }
+
+  // Details list
+  &-list {
+    @include list-unstyled();
+
+    > li {
+      margin-bottom: 0;
+      line-height: 2;
+    }
+
+    a {
+      display: block;
+    }
+  }
+}
+
+// Cards in right column
+.info {
+  &-card {
+    padding: 15px;
+    margin-bottom: 30px;
+    background-color: white;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    transition: all 200ms ease-in-out;
+
+    &:hover {
+      border-color: $gray-2;
+      box-shadow: 1px 3px 5px rgba($black, .05);
+    }
+
+    @include breakpoint(1200px) {
+      padding: 30px;
+    }
+  }
+
+  &-item {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    & + & {
+      border-top: 1px solid $gray-4;
+    }
+
+    // TODO: add classes for these elements
+    > h3 {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      font-size: 20px;
+
+      > span {
+        font-size: 14px;
+        font-weight: normal;
+        color: $gray-6;
+      }
+    }
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &-meta {
+    font-size: 12px;
+    font-weight: bold;
+    color: $gray-6;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+  }
+}
+
+// Helper class for underline where a link will go
+.underline {
+  text-decoration: underline;
+}
+
+// Image styles here
+.img {
+  // display: block;
+  max-width: 120px;
+  // margin-right: auto;
+  margin-bottom: 30px;
+  // margin-left: auto;
+  border-radius: 50%;
+}
