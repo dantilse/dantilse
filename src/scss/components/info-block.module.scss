@@ -84,6 +84,15 @@
     > :last-child {
       margin-bottom: 0;
     }
+
+    ul {
+      margin-left: 1em;
+      list-style-type: '\203A';
+
+      li {
+        padding-left: 1em;
+      }
+    }
   }
 
   &-meta {

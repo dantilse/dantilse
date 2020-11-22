@@ -35,9 +35,21 @@ const Col = () => (
           projects in an Agile environment.
         </p>
         <ul>
-          <li>Some key point here</li>
-          <li>Follow up with a few points</li>
-          <li>End on a strong point</li>
+          <li>
+            Communicate with stakeholders to define project objectives and scope
+          </li>
+          <li>
+            Deliver UX proposals based on best practices, industy standards, and
+            direct and indirect user feedback
+          </li>
+          <li>
+            Work directly with Visual Designer and Content Strategist to provide
+            high-fidelity prototypes
+          </li>
+          <li>
+            Deliver front-end UI elements built with HTML/CSS/JS including
+            ReactJS
+          </li>
         </ul>
       </div>
       <div className={styles.infoItem}>
@@ -46,20 +58,19 @@ const Col = () => (
         </h3>
         <p className={styles.infoMeta}>Liaison Creative + Marketing</p>
         <p>
-          Working as a contractor for Liaison, I have been providing UI & UX
-          services for NXP Semiconductors in Austin, TX for two current
-          projects; an internal CMS tool and a Responsive Re-design of their
-          current website. Throughout this contract I have conducted user
-          research, produced UI & interactive mockups for review, and submitted
-          HTML components and templates for back-end developers to integrate
-          into their CMS, after working through browser testing and UAT
-          environments.
+          Working as a contractor for Liaison, I provided UI & UX services for
+          NXP Semiconductors in Austin, TX for two unique projects; an internal
+          CMS tool and a responsive re-design of their current website.
+          Throughout this contract I conducted user research, produced
+          interactive mockups for review, and submitted HTML components and
+          templates for back-end developers to integrate into their CMS, after
+          working through browser testing and UAT environments.
         </p>
-        <ul>
+        {/* <ul>
           <li>Some key point here</li>
           <li>Follow up with a few points</li>
           <li>End on a strong point</li>
-        </ul>
+        </ul> */}
       </div>
       <div className={styles.infoItem}>
         <h3>
@@ -75,11 +86,11 @@ const Col = () => (
           process by peers, following accessibility guidelines, and supporting
           all major browsers (mobile and desktop) including IE10.
         </p>
-        <ul>
+        {/* <ul>
           <li>Some key point here</li>
           <li>Follow up with a few points</li>
           <li>End on a strong point</li>
-        </ul>
+        </ul> */}
       </div>
       <div className={styles.infoItem}>
         <h3>
@@ -87,13 +98,15 @@ const Col = () => (
         </h3>
         <p className={styles.infoMeta}>Freelance</p>
         <p>
-          Providing Graphic/Web/UX design services for various startups,
+          Provided Graphic/Web/UX design services for various startups,
           non-profits, and ecommerce clients.
         </p>
         <ul>
-          <li>Some key point here</li>
-          <li>Follow up with a few points</li>
-          <li>End on a strong point</li>
+          <li>Utilized common CMS systems such as WordPress</li>
+          <li>
+            Create consistent branding across web and social media platforms
+          </li>
+          <li>Provide continuing web support and design updates</li>
         </ul>
       </div>
     </div>
