@@ -10,8 +10,8 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-import LayoutContainer from "./layout-container"
-import "./layout.css"
+// import LayoutContainer from "./layout-container"
+import "./layout.scss"
 import footerStyles from "../scss/components/footer.module.scss"
 import layoutStyles from "../scss/components/layout-container.module.scss"
 

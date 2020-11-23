@@ -31,8 +31,9 @@ const Image = () => {
 
   return (
     <Img
-      className={[styles.img, "test"].join(" ")}
+      className={styles.img}
       fluid={data.placeholderImage.childImageSharp.fluid}
+      alt="profile image"
     />
   )
 }
