@@ -2,7 +2,7 @@ import React from "react"
 import { StaticQuery, graphql, Link } from "gatsby"
 
 import Layout from "../components/layout"
-import PostItemPreview from '../components/postItemPreview'
+import PostItemPreview from "../components/postItemPreview"
 
 const getMarkdownPosts = graphql`
   {
