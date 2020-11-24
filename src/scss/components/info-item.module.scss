@@ -15,23 +15,18 @@
   &-title {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-right: -15px;
+    // justify-content: space-between;
     margin-bottom: 5px;
-    margin-left: -15px;
     font-size: 20px;
 
     &-main {
       flex-basis: 330px;
       flex-grow: 1;
-      padding-right: 15px;
-      padding-left: 15px;
+      padding-right: 30px;
       margin-bottom: 5px;
     }
 
     &-meta {
-      padding-right: 15px;
-      padding-left: 15px;
       font-size: $font-size-small;
       font-weight: normal;
       color: $text-muted;
@@ -58,6 +53,10 @@
       li {
         padding-left: 1em;
       }
+    }
+
+    > :last-child {
+      margin-bottom: 0;
     }
   }
 }

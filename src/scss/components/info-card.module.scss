@@ -26,5 +26,9 @@
     .card-heading + & {
       margin-top: 10px;
     }
+
+    > :last-child {
+      margin-bottom: 0;
+    }
   }
 }

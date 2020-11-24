@@ -13,9 +13,9 @@
   margin-right: auto;
   margin-left: auto;
 
-  @include breakpoint(768px) {
-    width: 740px;
-  }
+  // @include breakpoint(768px) {
+  //   width: 740px;
+  // }
 
   @include breakpoint(992px) {
     width: 980px;
