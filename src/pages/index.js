@@ -12,8 +12,6 @@ import {
 } from "../components/info-item"
 import SEO from "../components/seo"
 
-import styles from "../scss/components/info-block.module.scss"
-
 const Col = () => (
   <React.Fragment>
     <InfoCard>
@@ -23,7 +21,7 @@ const Col = () => (
           Experienced User Interface Developer utilizing modern frameworks such
           as ReactJS and Redux to help scale websites through data-driven
           single-page-applications built on a foundation of accessible and
-          semantic HTML/CSS/JS.
+          semantic HTML/CSS/JavaScript.
         </p>
         <p>
           Collaborative team member working directly with visual designers and
@@ -37,11 +35,6 @@ const Col = () => (
           deliver features and enhancements in accordance with a strict schedule
           of releases.
         </p>
-        {/* <ul>
-          <li><strong>Key Technologies:</strong></li>
-          <li>React JS</li>
-
-        </ul> */}
       </InfoSummary>
     </InfoCard>
     <InfoCard>
@@ -66,7 +59,7 @@ const Col = () => (
             adhere to a consistent design system. After design approval and
             product owner sign-off, I'm responsible for building, testing,
             optimizing, and documenting UI elements and design patterns with
-            HTML, CSS, JS (including ReactJS).
+            HTML, CSS, JavaScript (including ReactJS).
           </p>
           <ul>
             <li>
@@ -82,8 +75,8 @@ const Col = () => (
               provide high-fidelity prototypes
             </li>
             <li>
-              Deliver front-end UI elements built with HTML/CSS/JS including
-              ReactJS
+              Deliver front-end UI elements built with HTML/CSS/JavaScript
+              including ReactJS
             </li>
             <li>Document and manage documentation of pattern library</li>
           </ul>
@@ -109,9 +102,9 @@ const Col = () => (
             assist in converting their then static website into a new CMS which
             required an almost complete re-design in order to provide a fully
             responsive and updated web experience. My role was to develop a
-            pattern library using HTML/CSS/JS in alignment with NXP's global
-            brand guidelines. Through this and subsequent successful projects, I
-            was asked to join the NXP team as a full-time employee.
+            pattern library using HTML/CSS/JavaScript in alignment with NXP's
+            global brand guidelines. Through this and subsequent successful
+            projects, I was asked to join the NXP team as a full-time employee.
           </p>
         </InfoContent>
       </InfoItem>
