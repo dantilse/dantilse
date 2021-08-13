@@ -40,7 +40,30 @@ const Col = () => (
     <InfoCard>
       <InfoHeading>Experience</InfoHeading>
       <InfoItem>
-        <InfoTitle meta={`Aug 2016 - Present`}>
+        <InfoTitle meta={`Jan 2021 - Present`}>Software Engineer</InfoTitle>
+        <InfoMeta>RapidDeploy</InfoMeta>
+        <InfoContent>
+          <p>
+            Developing the industry's only truly open and integrated emergency
+            response platform and helping to transform 9-1-1 communication
+            centers of any size into data-centric organizations, with a focus on
+            developing a web-based mapping solution.
+          </p>
+          <ul>
+            <li>Develop user interfaces using React.js</li>
+            <li>
+              Translating designs and wireframes into high quality, reusable
+              components
+            </li>
+            <li>
+              Optimizing for maximum performance across an array of web-capable
+              devices and browsers
+            </li>
+          </ul>
+        </InfoContent>
+      </InfoItem>
+      <InfoItem>
+        <InfoTitle meta={`Aug 2016 - Jan 2021`}>
           UI Developer / UX Designer
         </InfoTitle>
         <InfoMeta>NXP Semiconductors</InfoMeta>
