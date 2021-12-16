@@ -18,46 +18,50 @@ const Col = () => (
       <InfoHeading>About Me</InfoHeading>
       <InfoSummary>
         <p>
-          Experienced User Interface Developer utilizing modern frameworks such
-          as ReactJS and Redux to help scale websites through data-driven
+          Experienced Software Engineer utilizing modern frameworks such as
+          ReactJS and Redux to help scale websites and data-driven
           single-page-applications built on a foundation of accessible and
           semantic HTML/CSS/JavaScript.
         </p>
         <p>
-          Collaborative team member working directly with visual designers and
-          content strategists in order to develop a robust UI pattern library
-          and web templating system that spans the entire design cycle from
-          static mockups to functional components.
+          Collaborative team member working directly with engineers, designers
+          and product owners to develop scalable and performant applications
+          along with a robust UI pattern library.
         </p>
         <p>
-          Contributor to an Agile development process along with Project
-          Managers, Product Owners, and Scrum Masters in order to incrementally
-          deliver features and enhancements in accordance with a strict schedule
-          of releases.
+          Experience with an Agile development process and communication with
+          product owners, system architects, and other stakeholders in order to
+          incrementally deliver features and enhancements in accordance with a
+          strict schedule of releases.
         </p>
       </InfoSummary>
     </InfoCard>
     <InfoCard>
       <InfoHeading>Experience</InfoHeading>
       <InfoItem>
-        <InfoTitle meta={`Jan 2021 - Present`}>Software Engineer</InfoTitle>
+        <InfoTitle meta={`Jan 2021 - Dec 2021`}>Software Engineer</InfoTitle>
         <InfoMeta>RapidDeploy</InfoMeta>
         <InfoContent>
           <p>
             Developing the industry's only truly open and integrated emergency
             response platform and helping to transform 9-1-1 communication
             centers of any size into data-centric organizations, with a focus on
-            developing a web-based mapping solution.
+            adding text-to-911 commmunication within a web-based mapping
+            solution.
           </p>
           <ul>
-            <li>Develop user interfaces using React.js</li>
             <li>
-              Translating designs and wireframes into high quality, reusable
-              components
+              Develop user interfaces with React.js utilizing a micro-frontend
+              architecture
             </li>
             <li>
-              Optimizing for maximum performance across an array of web-capable
-              devices and browsers
+              Translating designs and wireframes into a custom pattern library
+              of high quality, reusable components
+            </li>
+            <li>Deliver high-quality code through an Agile delivery process</li>
+            <li>
+              Work closesly with product owners and various stakeholders to
+              define and communicate business requirements
             </li>
           </ul>
         </InfoContent>
@@ -75,14 +79,14 @@ const Col = () => (
             tools according to NXP's global brand guidelines.
           </p>
           <p>
-            As a senior member of the User Experience team, I am responsible for
-            managing concurrent projects using an Agile process. Working with
-            various stakeholders, I coordinate with a visual designer and other
-            UX team members in order to deliver high fidelity mockups that
-            adhere to a consistent design system. After design approval and
-            product owner sign-off, I'm responsible for building, testing,
-            optimizing, and documenting UI elements and design patterns with
-            HTML, CSS, JavaScript (including ReactJS).
+            As a senior member of the User Experience team, I was responsible
+            for managing concurrent projects using an Agile process. Working
+            with various stakeholders, I would co-ordinate with a visual
+            designer and other UX team members in order to deliver high fidelity
+            mockups that adhere to a consistent design system. After design
+            approval and product owner sign-off, I was responsible for building,
+            testing, optimizing, and documenting UI elements and design patterns
+            with HTML, CSS, JavaScript (including ReactJS).
           </p>
           <ul>
             <li>

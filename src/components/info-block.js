@@ -1,5 +1,4 @@
-import { Link } from "gatsby"
-import React, { useState } from "react"
+import React from "react"
 import Image from "./image"
 
 import styles from "../scss/components/info-block.module.scss"
@@ -10,7 +9,7 @@ const InfoBlock = () => (
       <Image />
       <figcaption>
         <h2 className={styles.infoName}>Daniel Ilse</h2>
-        <p className={styles.infoTitle}>UX/UI Developer</p>
+        <p className={styles.infoTitle}>Software Engineer</p>
       </figcaption>
     </figure>
     <ul className={styles.infoList}>
