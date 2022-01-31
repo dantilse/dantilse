@@ -67,7 +67,7 @@ const Col = () => (
         </InfoContent>
       </InfoItem>
       <InfoItem>
-        <InfoTitle meta={`Aug 2016 - Jan 2021`}>
+        <InfoTitle meta={`Oct 2018 - Jan 2021`}>
           UI Developer / UX Designer
         </InfoTitle>
         <InfoMeta>NXP Semiconductors</InfoMeta>
@@ -110,7 +110,7 @@ const Col = () => (
         </InfoContent>
       </InfoItem>
       <InfoItem>
-        <InfoTitle meta={`Aug 2016 - Oct 2018`}>
+        <InfoTitle meta={`Jun 2016 - Oct 2018`}>
           UI Developer / UX Designer
         </InfoTitle>
         <InfoMeta>Liaison Creative + Marketing</InfoMeta>
