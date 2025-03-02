@@ -1,16 +1,16 @@
-import React from "react"
-
-import Layout from "../components/layout"
-import ResumeLayout from "../components/resume-layout"
-import InfoBlock from "../components/info-block"
-import { InfoCard, InfoHeading, InfoSummary } from "../components/info-card"
+import React from "react";
 import {
-  InfoItem,
-  InfoTitle,
-  InfoMeta,
+  InfoBlock,
+  InfoCard,
   InfoContent,
-} from "../components/info-item"
-import SEO from "../components/seo"
+  InfoHeading,
+  InfoItem,
+  InfoMeta,
+  InfoSummary,
+  InfoTitle,
+  Layout,
+  ResumeLayout,
+} from "../components";
 
 const Col = () => (
   <React.Fragment>
@@ -39,7 +39,7 @@ const Col = () => (
     <InfoCard>
       <InfoHeading>Experience</InfoHeading>
       <InfoItem>
-        <InfoTitle meta={`Jan 2021 - Dec 2021`}>Software Engineer</InfoTitle>
+        <InfoTitle meta={`Jan 2021 - Dec 2021`} title="Software Engineer" />
         <InfoMeta>RapidDeploy</InfoMeta>
         <InfoContent>
           <p>
@@ -67,9 +67,10 @@ const Col = () => (
         </InfoContent>
       </InfoItem>
       <InfoItem>
-        <InfoTitle meta={`Oct 2018 - Jan 2021`}>
-          UI Developer / UX Designer
-        </InfoTitle>
+        <InfoTitle
+          meta={`Oct 2018 - Jan 2021`}
+          title="UI Developer / UX Designer"
+        />
         <InfoMeta>NXP Semiconductors</InfoMeta>
         <InfoContent>
           <p>
@@ -110,9 +111,10 @@ const Col = () => (
         </InfoContent>
       </InfoItem>
       <InfoItem>
-        <InfoTitle meta={`Jun 2016 - Oct 2018`}>
-          UI Developer / UX Designer
-        </InfoTitle>
+        <InfoTitle
+          meta={`Jun 2016 - Oct 2018`}
+          title="UI Developer / UX Designer"
+        />
         <InfoMeta>Liaison Creative + Marketing</InfoMeta>
         <InfoContent>
           <p>
@@ -136,7 +138,7 @@ const Col = () => (
         </InfoContent>
       </InfoItem>
       <InfoItem>
-        <InfoTitle meta={`Aug 2015 - May 2016`}>Web Developer</InfoTitle>
+        <InfoTitle meta={`Aug 2015 - May 2016`} title="Web Developer" />
         <InfoMeta>Edlio, LLC</InfoMeta>
         <InfoContent>
           <p>
@@ -152,9 +154,10 @@ const Col = () => (
         </InfoContent>
       </InfoItem>
       <InfoItem>
-        <InfoTitle meta={`Oct 2013 - Oct 2018`}>
-          Web Designer / Developer
-        </InfoTitle>
+        <InfoTitle
+          meta={`Oct 2013 - Oct 2018`}
+          title="Web Designer / Developer"
+        />
         <InfoMeta>Freelance</InfoMeta>
         <InfoContent>
           <p>
@@ -174,7 +177,7 @@ const Col = () => (
     <InfoCard>
       <InfoHeading>Education</InfoHeading>
       <InfoItem>
-        <InfoTitle meta={`2012 - 2014`}>Austin Community College</InfoTitle>
+        <InfoTitle meta={`2012 - 2014`} title="Austin Community College" />
         <InfoMeta>Web &amp; User Experience Design</InfoMeta>
         <InfoContent>
           <p>
@@ -184,9 +187,10 @@ const Col = () => (
         </InfoContent>
       </InfoItem>
       <InfoItem>
-        <InfoTitle meta={`2000 - 2002`}>
-          Northwest Missouri State University
-        </InfoTitle>
+        <InfoTitle
+          meta={`2000 - 2002`}
+          title="Northwest Missouri State University"
+        />
         <InfoMeta>Business Management</InfoMeta>
         <InfoContent>
           <p>
@@ -197,13 +201,13 @@ const Col = () => (
       </InfoItem>
     </InfoCard>
   </React.Fragment>
-)
+);
 
-const IndexPage = () => (
+const ResumePage = () => (
   <Layout>
-    <SEO title="Home" />
+    {/* <SEO title="Home" /> */}
     <ResumeLayout left={<InfoBlock />} right={<Col />} />
   </Layout>
-)
+);
 
-export default IndexPage
+export default ResumePage;

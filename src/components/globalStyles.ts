@@ -1,5 +1,7 @@
-@import "../scss/inc/setup";
+import { createGlobalStyle } from "styled-components";
+import { commonColors } from "../utils";
 
+export const GlobalStyle = createGlobalStyle`
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -201,7 +203,7 @@ html {
   box-sizing: inherit;
 }
 body {
-  color: $text-color;
+  color: ${commonColors.textColor};
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -230,7 +232,7 @@ h1 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: $headings-color;
+  color: ${commonColors.headingsColor};
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
@@ -247,7 +249,7 @@ h2 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: $headings-color;
+  color: ${commonColors.headingsColor};
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
@@ -264,7 +266,7 @@ h3 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: $headings-color;
+  color: ${commonColors.headingsColor};
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
@@ -281,7 +283,7 @@ h4 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: $headings-color;
+  color: ${commonColors.headingsColor};
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
@@ -298,7 +300,7 @@ h5 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: $headings-color;
+  color: ${commonColors.headingsColor};
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
@@ -315,7 +317,7 @@ h6 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: $headings-color;
+  color: ${commonColors.headingsColor};
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
@@ -622,3 +624,4 @@ pre tt:after {
     font-size: 100%;
   }
 }
+`;
