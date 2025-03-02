@@ -1,207 +1,214 @@
-import type { HeadFC, PageProps } from "gatsby";
-import * as React from "react";
+import type { HeadFC } from "gatsby";
+import React from "react";
+import {
+  InfoBlock,
+  InfoCard,
+  InfoContent,
+  InfoHeading,
+  InfoItem,
+  InfoMeta,
+  InfoSummary,
+  InfoTitle,
+  Layout,
+  ResumeLayout,
+} from "../components";
 
-const pageStyles = {
-  color: "#232129",
-  padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-};
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-};
-const headingAccentStyles = {
-  color: "#663399",
-};
-const paragraphStyles = {
-  marginBottom: 48,
-};
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-};
-const listStyles = {
-  marginBottom: 96,
-  paddingLeft: 0,
-};
-const doclistStyles = {
-  paddingLeft: 0,
-};
-const listItemStyles = {
-  fontWeight: 300,
-  fontSize: 24,
-  maxWidth: 560,
-  marginBottom: 30,
-};
+const Col = () => (
+  <React.Fragment>
+    <InfoCard>
+      <InfoHeading>About Me</InfoHeading>
+      <InfoSummary>
+        <p>
+          Experienced Software Engineer utilizing modern frameworks such as
+          ReactJS and Redux to help scale websites and data-driven
+          single-page-applications built on a foundation of accessible and
+          semantic HTML/CSS/JavaScript.
+        </p>
+        <p>
+          Collaborative team member working directly with engineers, designers
+          and product owners to develop scalable and performant applications
+          along with a robust UI pattern library.
+        </p>
+        <p>
+          Experience with an Agile development process and communication with
+          product owners, system architects, and other stakeholders in order to
+          incrementally deliver features and enhancements in accordance with a
+          strict schedule of releases.
+        </p>
+      </InfoSummary>
+    </InfoCard>
+    <InfoCard>
+      <InfoHeading>Experience</InfoHeading>
+      <InfoItem>
+        <InfoTitle meta={`Jan 2021 - Dec 2021`} title="Software Engineer" />
+        <InfoMeta>RapidDeploy</InfoMeta>
+        <InfoContent>
+          <p>
+            Developing the industry's only truly open and integrated emergency
+            response platform and helping to transform 9-1-1 communication
+            centers of any size into data-centric organizations, with a focus on
+            adding text-to-911 commmunication within a web-based mapping
+            solution.
+          </p>
+          <ul>
+            <li>
+              Develop user interfaces with React.js utilizing a micro-frontend
+              architecture
+            </li>
+            <li>
+              Translating designs and wireframes into a custom pattern library
+              of high quality, reusable components
+            </li>
+            <li>Deliver high-quality code through an Agile delivery process</li>
+            <li>
+              Work closesly with product owners and various stakeholders to
+              define and communicate business requirements
+            </li>
+          </ul>
+        </InfoContent>
+      </InfoItem>
+      <InfoItem>
+        <InfoTitle
+          meta={`Oct 2018 - Jan 2021`}
+          title="UI Developer / UX Designer"
+        />
+        <InfoMeta>NXP Semiconductors</InfoMeta>
+        <InfoContent>
+          <p>
+            UI developer responsible for advancing NXP's web presence by
+            developing and improving UI modules and complete interfaces for web
+            templates, single-page applications (SPAs), and other data-driven
+            tools according to NXP's global brand guidelines.
+          </p>
+          <p>
+            As a senior member of the User Experience team, I was responsible
+            for managing concurrent projects using an Agile process. Working
+            with various stakeholders, I would co-ordinate with a visual
+            designer and other UX team members in order to deliver high fidelity
+            mockups that adhere to a consistent design system. After design
+            approval and product owner sign-off, I was responsible for building,
+            testing, optimizing, and documenting UI elements and design patterns
+            with HTML, CSS, JavaScript (including ReactJS).
+          </p>
+          <ul>
+            <li>
+              Communicate with stakeholders to define project objectives and
+              scope
+            </li>
+            <li>
+              Deliver UX proposals based on best practices, industry standards,
+              and direct and indirect user feedback
+            </li>
+            <li>
+              Work directly with Visual Designer and Content Strategist to
+              provide high-fidelity prototypes
+            </li>
+            <li>
+              Deliver front-end UI elements built with HTML/CSS/JavaScript
+              including ReactJS
+            </li>
+            <li>Document and manage documentation of pattern library</li>
+          </ul>
+        </InfoContent>
+      </InfoItem>
+      <InfoItem>
+        <InfoTitle
+          meta={`Jun 2016 - Oct 2018`}
+          title="UI Developer / UX Designer"
+        />
+        <InfoMeta>Liaison Creative + Marketing</InfoMeta>
+        <InfoContent>
+          <p>
+            Contracting through Liaison Creative + Marketing, I was tasked to
+            provide UX/UI services to NXP Semiconductors in order to develop an
+            internal management tool. Through a rigorous process of user
+            research, wireframing, and coordinating with the development team, I
+            provided a complete UX solution. Unfortunately, the project was
+            unable to proceed due to development costs.
+          </p>
 
-const linkStyle = {
-  color: "#8954A8",
-  fontWeight: "bold",
-  fontSize: 16,
-  verticalAlign: "5%",
-};
+          <p>
+            At the conclusion of that project, I was asked to stay on board to
+            assist in converting their then static website into a new CMS which
+            required an almost complete re-design in order to provide a fully
+            responsive and updated web experience. My role was to develop a
+            pattern library using HTML/CSS/JavaScript in alignment with NXP's
+            global brand guidelines. Through this and subsequent successful
+            projects, I was asked to join the NXP team as a full-time employee.
+          </p>
+        </InfoContent>
+      </InfoItem>
+      <InfoItem>
+        <InfoTitle meta={`Aug 2015 - May 2016`} title="Web Developer" />
+        <InfoMeta>Edlio, LLC</InfoMeta>
+        <InfoContent>
+          <p>
+            Built rich and engaging websites with the "Slicing" team, and
+            specializing in the educational area. Was responsible for taking
+            Photoshop (PSD) files, and converting them into responsive websites
+            for individual schools, multi-campus schools, and school districts
+            across the United States. Our workflow involved a rigorous code
+            review process by peers, following accessibility guidelines, and
+            supporting all major browsers (mobile and desktop) including
+            Internet Explorer 10.
+          </p>
+        </InfoContent>
+      </InfoItem>
+      <InfoItem>
+        <InfoTitle
+          meta={`Oct 2013 - Oct 2018`}
+          title="Web Designer / Developer"
+        />
+        <InfoMeta>Freelance</InfoMeta>
+        <InfoContent>
+          <p>
+            Provided Graphic/Web/UX design services for various startups,
+            non-profits, and e-commerce clients.
+          </p>
+          <ul>
+            <li>Utilized common CMS systems such as WordPress</li>
+            <li>
+              Create consistent branding across web and social media platforms
+            </li>
+            <li>Provide continuing web support and design updates</li>
+          </ul>
+        </InfoContent>
+      </InfoItem>
+    </InfoCard>
+    <InfoCard>
+      <InfoHeading>Education</InfoHeading>
+      <InfoItem>
+        <InfoTitle meta={`2012 - 2014`} title="Austin Community College" />
+        <InfoMeta>Web &amp; User Experience Design</InfoMeta>
+        <InfoContent>
+          <p>
+            Earned an Associate's Degree in Web and Interactive Design with a
+            focus on digital user experience.
+          </p>
+        </InfoContent>
+      </InfoItem>
+      <InfoItem>
+        <InfoTitle
+          meta={`2000 - 2002`}
+          title="Northwest Missouri State University"
+        />
+        <InfoMeta>Business Management</InfoMeta>
+        <InfoContent>
+          <p>
+            Studied Business Management with an interest in entrepreneurship,
+            and member of Alpha Kappa Lambda fraternity.
+          </p>
+        </InfoContent>
+      </InfoItem>
+    </InfoCard>
+  </React.Fragment>
+);
 
-const docLinkStyle = {
-  ...linkStyle,
-  listStyleType: "none",
-  display: `inline-block`,
-  marginBottom: 24,
-  marginRight: 12,
-};
-
-const descriptionStyle = {
-  color: "#232129",
-  fontSize: 14,
-  marginTop: 10,
-  marginBottom: 0,
-  lineHeight: 1.25,
-};
-
-const docLinks = [
-  {
-    text: "TypeScript Documentation",
-    url: "https://www.gatsbyjs.com/docs/how-to/custom-configuration/typescript/",
-    color: "#8954A8",
-  },
-  {
-    text: "GraphQL Typegen Documentation",
-    url: "https://www.gatsbyjs.com/docs/how-to/local-development/graphql-typegen/",
-    color: "#8954A8",
-  },
-  {
-    text: "Signup",
-    url: "/signup",
-    color: "#8954A8",
-  },
-];
-
-const badgeStyle = {
-  color: "#fff",
-  backgroundColor: "#088413",
-  border: "1px solid #088413",
-  fontSize: 11,
-  fontWeight: "bold",
-  letterSpacing: 1,
-  borderRadius: 4,
-  padding: "4px 6px",
-  display: "inline-block",
-  position: "relative" as "relative",
-  top: -2,
-  marginLeft: 10,
-  lineHeight: 1,
-};
-
-type Link = {
-  badge?: boolean;
-  color: string;
-  description: string;
-  text: string;
-  url: string;
-};
-
-const links: Link[] = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial/getting-started/",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-    color: "#E95800",
-  },
-  {
-    text: "How to Guides",
-    url: "https://www.gatsbyjs.com/docs/how-to/",
-    description:
-      "Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.",
-    color: "#1099A8",
-  },
-  {
-    text: "Reference Guides",
-    url: "https://www.gatsbyjs.com/docs/reference/",
-    description:
-      "Nitty-gritty technical descriptions of how Gatsby works. Most useful when you need detailed information about Gatsby's APIs.",
-    color: "#BC027F",
-  },
-  {
-    text: "Conceptual Guides",
-    url: "https://www.gatsbyjs.com/docs/conceptual/",
-    description:
-      "Big-picture explanations of higher-level Gatsby concepts. Most useful for building understanding of a particular topic.",
-    color: "#0D96F2",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-    color: "#8EB814",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    badge: true,
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-    color: "#663399",
-  },
-];
-
-const IndexPage: React.FC<PageProps> = () => {
-  return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>
-        Congratulations
-        <br />
-        <span style={headingAccentStyles}>
-          — you just made a Gatsby site! 🎉🎉🎉
-        </span>
-      </h1>
-      <p style={paragraphStyles}>
-        Edit <code style={codeStyles}>src/pages/index.tsx</code> to see this
-        page update in real-time. 😎
-      </p>
-      <ul style={doclistStyles}>
-        {docLinks.map((doc) => (
-          <li key={doc.url} style={docLinkStyle}>
-            <a
-              style={linkStyle}
-              href={`${doc.url}?utm_source=starter&utm_medium=ts-docs&utm_campaign=minimal-starter-ts`}
-            >
-              {doc.text}
-            </a>
-          </li>
-        ))}
-      </ul>
-      <ul style={listStyles}>
-        {links.map((link) => (
-          <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
-            <span>
-              <a
-                style={linkStyle}
-                href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter-ts`}
-              >
-                {link.text}
-              </a>
-              {link.badge && (
-                <span style={badgeStyle} aria-label="New Badge">
-                  NEW!
-                </span>
-              )}
-              <p style={descriptionStyle}>{link.description}</p>
-            </span>
-          </li>
-        ))}
-      </ul>
-      <img
-        alt="Gatsby G Logo"
-        src="data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2a10 10 0 110 20 10 10 0 010-20zm0 2c-3.73 0-6.86 2.55-7.75 6L14 19.75c3.45-.89 6-4.02 6-7.75h-5.25v1.5h3.45a6.37 6.37 0 01-3.89 4.44L6.06 9.69C7 7.31 9.3 5.63 12 5.63c2.13 0 4 1.04 5.18 2.65l1.23-1.06A7.959 7.959 0 0012 4zm-8 8a8 8 0 008 8c.04 0 .09 0-8-8z' fill='%23639'/%3E%3C/svg%3E"
-      />
-    </main>
-  );
-};
+const IndexPage = () => (
+  <Layout>
+    <ResumeLayout left={<InfoBlock />} right={<Col />} />
+  </Layout>
+);
 
 export default IndexPage;
 
