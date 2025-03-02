@@ -1,8 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import { Detail } from "../types";
 import { breakpoints, colors } from "../utils";
+import { InfoContent, InfoItem, InfoMeta, InfoTitle } from "./InfoItem";
 
-export const InfoCard = styled.div`
+export const Card = styled.div`
   padding: 15px;
   margin-bottom: 30px;
   background-color: ${colors.white};
@@ -28,3 +30,45 @@ export const InfoSummary = styled.div`
   padding-top: 30px;
   padding-bottom: 30px;
 `;
+
+const List = styled.ul`
+  margin-left: 1em;
+  list-style: "›" outside none;
+`;
+
+const ListItem = styled.li`
+  padding-left: 1em;
+`;
+
+interface InfoCardProps {
+  heading: string;
+  items: Detail[];
+}
+
+export const InfoCard = ({ heading, items }: InfoCardProps) => {
+  return (
+    <Card>
+      <InfoHeading>{heading}</InfoHeading>
+      {items.map(
+        ({ description, highlights = [], subtitle, metadata, title }) => (
+          <InfoItem>
+            <InfoTitle meta={metadata} title={title} />
+            <InfoMeta>{subtitle}</InfoMeta>
+            <InfoContent>
+              {description.map((text) => (
+                <p>{text}</p>
+              ))}
+              {highlights.length > 0 && (
+                <List>
+                  {highlights.map((highlight) => (
+                    <ListItem>{highlight}</ListItem>
+                  ))}
+                </List>
+              )}
+            </InfoContent>
+          </InfoItem>
+        )
+      )}
+    </Card>
+  );
+};

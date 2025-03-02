@@ -1,14 +1,11 @@
 import type { HeadFC } from "gatsby";
 import React from "react";
 import {
+  Card,
   InfoBlock,
   InfoCard,
-  InfoContent,
   InfoHeading,
-  InfoItem,
-  InfoMeta,
   InfoSummary,
-  InfoTitle,
   Layout,
   ResumeLayout,
 } from "../components";
@@ -16,51 +13,16 @@ import { ABOUT, EDUCATION, WORK_EXPERIENCE } from "../constants";
 
 const Col = () => (
   <React.Fragment>
-    <InfoCard>
+    <Card>
       <InfoHeading>About Me</InfoHeading>
       <InfoSummary>
-        {ABOUT.map((sentence) => (
-          <p>{sentence}</p>
+        {ABOUT.map((str) => (
+          <p key={str}>{str}</p>
         ))}
       </InfoSummary>
-    </InfoCard>
-    <InfoCard>
-      <InfoHeading>Experience</InfoHeading>
-      {WORK_EXPERIENCE.map(
-        ({ description, highlights = [], subtitle, metadata, title }) => (
-          <InfoItem>
-            <InfoTitle meta={metadata} title={title} />
-            <InfoMeta>{subtitle}</InfoMeta>
-            <InfoContent>
-              {description.map((text) => (
-                <p>{text}</p>
-              ))}
-              {highlights.length > 0 && (
-                <ul>
-                  {highlights.map((highlight) => (
-                    <li>{highlight}</li>
-                  ))}
-                </ul>
-              )}
-            </InfoContent>
-          </InfoItem>
-        )
-      )}
-    </InfoCard>
-    <InfoCard>
-      <InfoHeading>Education</InfoHeading>
-      {EDUCATION.map(({ description, metadata, subtitle, title }) => (
-        <InfoItem>
-          <InfoTitle meta={metadata} title={title} />
-          <InfoMeta>{subtitle}</InfoMeta>
-          <InfoContent>
-            {description.map((detail) => (
-              <p>{detail}</p>
-            ))}
-          </InfoContent>
-        </InfoItem>
-      ))}
-    </InfoCard>
+    </Card>
+    <InfoCard heading="Experience" items={WORK_EXPERIENCE} />
+    <InfoCard heading="Education" items={EDUCATION} />
   </React.Fragment>
 );
 

@@ -5,35 +5,25 @@ import { breakpoints, colors, commonColors } from "../utils";
 const Resume = styled.div`
   display: flex;
   flex-wrap: wrap;
+  gap: 16px 32px;
   margin-top: 60px;
-  margin-right: -15px;
-  margin-left: -15px;
+
+  @media screen and (max-width: ${breakpoints.small}) {
+    flex-direction: column;
+  }
 `;
 
 const LeftCol = styled.div`
   flex-basis: 280px;
   flex-grow: 0;
   flex-shrink: 0;
-  padding-right: 30px;
-  padding-left: 30px;
-
-  @media screen and (max-width: ${breakpoints.small}) {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
+  display: flex;
+  justify-content: center;
 `;
 
 const RightCol = styled.div`
   flex-basis: 320px;
   flex-grow: 3;
-  padding-right: 15px;
-  padding-left: 15px;
-
-  @media screen and (max-width: ${breakpoints.small}) {
-    padding-top: 30px;
-    margin-top: 30px;
-    border-top: 1px solid ${commonColors.borderColor};
-  }
 `;
 
 export const ResumeLayout = ({ left, right }: { left: any; right: any }) => (

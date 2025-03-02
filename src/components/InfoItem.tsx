@@ -44,15 +44,6 @@ export const InfoMeta = styled.p`
 export const InfoContent = styled.div`
   position: relative;
 
-  ul {
-    margin-left: 1em;
-    list-style-type: "\203A";
-
-    li {
-      padding-left: 1em;
-    }
-  }
-
   > :last-child {
     margin-bottom: 0;
   }
