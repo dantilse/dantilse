@@ -24,4 +24,7 @@ export const InfoHeading = styled.h2`
   margin-bottom: 0;
 `;
 
-export const InfoSummary = styled.div``;
+export const InfoSummary = styled.div`
+  padding-top: 30px;
+  padding-bottom: 30px;
+`;
