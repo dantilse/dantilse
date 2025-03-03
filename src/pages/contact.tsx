@@ -45,6 +45,7 @@ const SubmitButton = styled.button`
 const ContactPage = () => (
   <Layout>
     <Form data-netlify="true" method="POST" name="contact">
+      <input type="hidden" name="form-name" value="contact" />
       <FormField>
         <Label htmlFor="email">Email</Label>
         <Input id="email" name="email" type="text" />
