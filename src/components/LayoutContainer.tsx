@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { breakpoints } from "../utils";
 
 export const LayoutContainer = styled.div`
+  flex-grow: 1;
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
