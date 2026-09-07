@@ -1,28 +1,27 @@
 exports.handler = async function () {
   try {
-    const response = await fetch("https://api.theoddsapi.com/me/", {
+    const url =
+      "https://api.theoddsapi.com/odds/" +
+      "?sport_key=baseball_mlb" +
+      "&markets=h2h" +
+      "&regions=us" +
+      "&oddsFormat=american";
+
+    const response = await fetch(url, {
       headers: {
         "x-api-key": process.env.THE_ODDS_API_KEY
       }
     });
 
-    const text = await response.text();
+    const data = await response.json();
 
     return {
-      statusCode: 200,
+      statusCode: response.status,
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        "Cache-Control": "no-store"
       },
-      body: JSON.stringify({
-        theOddsApiStatus: response.status,
-        theOddsApiResponse: (() => {
-          try {
-            return JSON.parse(text);
-          } catch {
-            return text;
-          }
-        })()
-      })
+      body: JSON.stringify(data)
     };
   } catch (error) {
     return {
@@ -31,6 +30,7 @@ exports.handler = async function () {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
+        success: false,
         error: error.message
       })
     };
